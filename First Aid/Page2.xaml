@@ -1,0 +1,52 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="MosqueFinder.Page2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="FIRST AID BD" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="CONTACT" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" RenderTransformOrigin="0.494,0.479">
+            <ComboBox x:Name="ComboBoxMenu" HorizontalAlignment="Left" Height="168"   
+                  Margin="37,70,0,0" VerticalAlignment="Top"   
+                  Width="326">
+                <ComboBoxItem Content="LabAid Cardiac Hospital" IsSelected="True"/>
+                <ComboBoxItem Content="Square Hospital"/>
+                <ComboBoxItem Content="Dhaka Medical College" />
+                <ComboBoxItem Content="Apollo Hospital"/>
+                <ComboBoxItem Content="Samarita Hospital"/>
+                <ComboBoxItem Content="Ibn Sina Hospital"/>
+
+            </ComboBox>
+            <TextBlock x:Name="TextBlock1" TextWrapping="Wrap" Text="Select A Hospital" Margin="67,290,93,223" CacheMode="BitmapCache"/>
+            <Button Content="View Info" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,461,0,0" Click="Button_Click" Width="230"/>
+            <TextBlock x:Name="TextBlock2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Select A Hospital" VerticalAlignment="Top" Margin="67,389,0,0" Width="296" Height="67"/>
+            <Button Content="CALL!!" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="216,461,0,0" Width="240" Click="Button_Click_1"/>
+
+        </Grid>
+
+
+    </Grid>
+
+</phone:PhoneApplicationPage>
